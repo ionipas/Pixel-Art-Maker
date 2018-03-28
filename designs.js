@@ -7,7 +7,9 @@ const sizePicker = document.querySelector('#sizePicker');
 
 // selected color input
 function selectColor(color) {
-  color.target.style.backgroundColor = colorPicker.value;
+  if (color.target.nodeName.toLowerCase() === 'td') {
+    color.target.style.backgroundColor = colorPicker.value;
+  }
 };
 
 //selected size input and added an eventListener on form submit button
